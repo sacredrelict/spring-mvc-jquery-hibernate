@@ -18,6 +18,9 @@
                 <li<c:if test="${page == 'statistics'}"> class="active"</c:if>>
                     <a href="/statistics">Statistic</a>
                 </li>
+                <li>
+                    <a href='<c:url value="/j_spring_security_logout"/>'>Sign out</a>
+                </li>
             </ul>
         </div>
     </div>

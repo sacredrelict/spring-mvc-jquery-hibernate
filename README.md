@@ -8,6 +8,7 @@
 - If you use IDE, create run configuration for Tomcat and add "web.war" to it.
 - Run Tomcat. 
 - Open "http://localhost:8080/"
+- Enter default user auth data: login - admin, password - admin.
 - Application will populate database with default data.
 - Enjoy!
 

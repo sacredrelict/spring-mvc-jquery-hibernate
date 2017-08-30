@@ -13,6 +13,7 @@
 
 ## File-based project format:
 *.iws
+*.iml
 
 # IntelliJ
 /out/
@@ -24,3 +25,6 @@ lightcrm_web/target/
 lightcrm_common/src/test/
 lightcrm_db/src/test/
 lightcrm_web/src/test/
+lightcrm_common/commom.iml
+lightcrm_db/db.iml
+lightcrm_web/web.iml

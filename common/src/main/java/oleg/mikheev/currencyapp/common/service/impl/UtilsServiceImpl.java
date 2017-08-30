@@ -4,8 +4,10 @@ import oleg.mikheev.currencyapp.common.service.service.UtilsService;
 import oleg.mikheev.currencyapp.data.Utils;
 import oleg.mikheev.currencyapp.data.entity.Currency;
 import oleg.mikheev.currencyapp.data.entity.CurrencyCoefficient;
+import oleg.mikheev.currencyapp.data.entity.User;
 import oleg.mikheev.currencyapp.data.repository.dao.CurrencyCoefficientDao;
 import oleg.mikheev.currencyapp.data.repository.dao.CurrencyDao;
+import oleg.mikheev.currencyapp.data.repository.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,9 @@ import java.util.Random;
 public class UtilsServiceImpl implements UtilsService {
 
     @Autowired
+    private UserDao userDao;
+
+    @Autowired
     private CurrencyDao currencyDao;
 
     @Autowired
@@ -27,7 +32,20 @@ public class UtilsServiceImpl implements UtilsService {
 
     @Override
     public void addDefaultData() {
+        addDefaultUser();
         addDefaultCurrencies();
+    }
+
+    private void addDefaultUser() {
+        User tempUser = userDao.findByLogin("admin");
+        if (tempUser == null) {
+            User user = new User();
+            user.setLogin("admin");
+            user.setPassword("2bd07dcdb89b841216ba52a92c5b37c9f38760a8");
+            user.setEmail("admin@admin.com");
+            user.setActive(true);
+            userDao.save(user);
+        }
     }
 
     /**

@@ -17,6 +17,7 @@
 		<mapping class="oleg.mikheev.currencyapp.data.entity.Currency" />
 		<mapping class="oleg.mikheev.currencyapp.data.entity.CurrencyCoefficient" />
 		<mapping class="oleg.mikheev.currencyapp.data.entity.Statistic" />
+		<mapping class="oleg.mikheev.currencyapp.data.entity.User" />
 
 	</session-factory>
 </hibernate-configuration>
